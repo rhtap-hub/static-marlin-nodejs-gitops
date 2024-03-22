@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: static-marlin-nodejs-gitops
+  description: This is GitOps manifest for static-marlin-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: static-marlin-nodejs
+    janus-idp.io/tekton: static-marlin-nodejs 
+    backstage.io/kubernetes-id: static-marlin-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:static-marlin-nodejs

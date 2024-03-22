@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: static-marlin-nodejs-gitops-repository
+spec:
+  url: https://github.com/rhtap-hub/static-marlin-nodejs-gitops
